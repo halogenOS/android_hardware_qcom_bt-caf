@@ -58,7 +58,7 @@ int bt_hci_init_transport_id (int chId )
   struct termios   term;
   int fd = -1;
   int retry = 0;
-  char ssrvalue[92]= {'\0'};
+  char ssrvalue[PROPERTY_VALUE_MAX]= {'\0'};
 
   ssrvalue[0] = '0';
   if(chId >= 2 || chId <0)
